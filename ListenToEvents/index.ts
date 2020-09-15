@@ -5,11 +5,7 @@ const listenToEvents = () => {
     console.log("trying to listen to events");
     const route = "cspam";
 
-    const apiUrl = process.env.PORT
-      ? "http://forums-ticker-server.herokuapp.com"
-      : "http://localhost:3001";
-
-    const eventUrl = `${apiUrl}/${route}`;
+    const eventUrl = `http://forums-ticker-server.herokuapp.com/cspam`;
     const events = new EventSource(eventUrl);
 
     events.onmessage = (event) => {
