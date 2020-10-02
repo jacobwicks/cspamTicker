@@ -5,7 +5,7 @@ const listenToEvents = () => {
     console.log("trying to listen to events");
     const route = "cspam";
 
-    const eventUrl = `http://forums-ticker-server.herokuapp.com/cspam`;
+    const eventUrl = `https://forums-ticker-server.herokuapp.com/cspam`;
     const events = new EventSource(eventUrl);
 
     events.onmessage = (event) => {
